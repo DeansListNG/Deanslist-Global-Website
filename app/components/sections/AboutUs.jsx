@@ -17,7 +17,7 @@ function AboutUs() {
 		'/images/nft/Scientistjoe.png',
 	]
 	return (
-		<div className="bg-[#090118] w-screen flex flex-col justify-center items-center text-white relative max-w-[1440px]" id="about-us">
+		<div className=" bg-[#090118]  mx-auto flex flex-col justify-center items-center text-white relative max-w-[1440px]" id="about-us">
 	{/* Background blur effect  */}
 	<div className="absolute  h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[40rem] -left-[8rem] -rotate-[45deg] blur-[390px] "></div>
 		<div className="absolute  h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[30rem] -right-[8rem] rotate-[45deg] blur-[390px] "></div>
@@ -31,7 +31,7 @@ function AboutUs() {
 
 			{/*Content*/}
 
-			<div className="flex flex-col md:flex-row mt-8  md:space-x-[180px]">
+			<div className="flex flex-col md:flex-row mt-8  md:space-x-[180px] lg:max-txl:space-x-[100px]">
 				{/*Left Content*/}
 
              <div className="md:w-[500px] text-[40px] leading-[45px] px-5 md:px-0 pt-5">

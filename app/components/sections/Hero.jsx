@@ -44,10 +44,13 @@ function Hero() {
 					<div className="w-fit ">Get Started</div>
 					
 				</button>
-				</a>	
+				</a>
+
+				<a href="https://discord.gg/deanslist" target="blank"  rel="noopener noreferrer">	
 				<button className="text-white hidden py-2 px-6 rounded-lg font-medium hover:bg-white hover:text-purple-900 transition md:flex gap-2 items-center">
 					Learn more <ArrowDown />
 				</button>
+				</a>
 			</div>
 
 			<div className="w-full hidden md:flex justify-center mt-[76px] overflow-hidden h-[320px] 	relative">

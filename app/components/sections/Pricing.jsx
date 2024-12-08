@@ -76,9 +76,9 @@ function Pricing() {
               ))}
       </ul>
             </div>
-            <div className="px-4 border-t border-[#26183c] mt-4 pt-4 md:mt-32 flex flex-col md:flex-row md:justify-between items-baseline">
-              <p className="text-5xl font-semibold">
-                <span className="font-semibold text-4xl">$</span>999<span className="text-sm text-gray-300">per session</span>
+            <div className="px-4 border-t border-[#26183c] mt-4 pt-4 md:mt-32 lg:max-txl:mt-40 flex flex-col md:flex-row md:justify-between items-baseline">
+              <p className="text-5xl lg:max-txl:text-4xl font-semibold">
+                <span className="font-semibold text-4xl lg:max-txl:text-3xl">$</span>999<span className="text-sm text-gray-300">per session</span>
         </p>
 
               <a href="https://discord.gg/deanslist" target="blank" rel="noopener noreferrer" className="w-full md:w-auto">
@@ -112,9 +112,9 @@ function Pricing() {
       </ul>
       </div>
             
-            <div className="px-4 border-t border-[#FFFFFF1F] mt-4 pt-4 md:mt-[122px] flex flex-col md:flex-row md:justify-between items-baseline">
-              <p className="text-5xl font-semibold">
-                <span className="font-semibold text-4xl">$</span>1,499<span className="text-sm text-gray-300">per session</span>
+            <div className="px-4 border-t border-[#FFFFFF1F] mt-4 pt-4 md:mt-[122px] lg:max-txl:mt-40 flex flex-col md:flex-row md:justify-between items-baseline">
+              <p className="text-5xl lg:max-txl:text-4xl font-semibold">
+                <span className="font-semibold text-4xl lg:max-txl:text-3xl">$</span>1,499<span className="text-sm text-gray-300">per session</span>
               </p>
 
               <a href="https://discord.gg/deanslist" target="blank" rel="noopener noreferrer" className="w-full md:w-auto">
@@ -129,10 +129,10 @@ function Pricing() {
 
     {/* Deep Dive Assessment */}
           <div className="bg-[#1a0d2d] text-white py-6 shadow-lg flex flex-col h-full card-animated-border max-w-[470px]">
-          <div className="px-4">
+          <div className="px-4 lg:max-txl:relative ">
             <h2 className="text-lg md:text-xl font-bold mb-4">
         Deep Dive Assessment{" "}
-              <span className="bg-[#3C1454] text-xs font-bold px-2 py-1 rounded-full border border-[#7E3F9D]">
+              <span className="bg-[#3C1454] lg:max-txl:absolute lg:max-txl:right-[25px] text-xs font-bold px-2 py-1 rounded-full border border-[#7E3F9D]">
           Exclusive
         </span>
       </h2>
@@ -153,8 +153,8 @@ function Pricing() {
       </div>
             
             <div className=" px-4 border-t border-[#26183c] mt-4 pt-4 md:mt-20 flex flex-col md:flex-row md:justify-between items-baseline">
-              <p className="text-5xl font-semibold">
-                <span className="font-semibold text-4xl">$</span>4,999<span className="text-sm text-gray-300">per session</span>
+              <p className="text-5xl lg:max-txl:text-4xl font-semibold">
+                <span className="font-semibold text-4xl lg:max-txl:text-3xl">$</span>4,999<span className="text-sm text-gray-300">per session</span>
               </p>
 
               <a href="https://discord.gg/deanslist" target="blank" rel="noopener noreferrer" className="w-full md:w-auto">

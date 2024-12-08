@@ -8,6 +8,9 @@ module.exports = {
   ],
   theme: {
   	extend: {
+		screens:{
+			'txl':'1308px'
+		},
 		  fontFamily: {
 			  inter: ['var(--font-inter)'],
 			  'editorial-new': ['var(--font-editorial-new)']

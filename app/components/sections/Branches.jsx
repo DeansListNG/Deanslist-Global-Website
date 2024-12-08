@@ -3,15 +3,15 @@ import SectionHeader from "../ui/SectionHeader";
 
 function Branches() {
 	return (
-		<div className="bg-[#090118] w-screen justify-center md:space-x-[120px] flex flex-col lg:flex-row pt-40 mb-12 relative ">
+		<div className="lg:max-txl:pr-5 bg-[#090118] w-screen justify-center md:space-x-[120px] flex flex-col lg:flex-row pt-40 mb-12 relative ">
 				{/* Background blur effect  */}
 		<div className="absolute  h-[952px] w-[207px] bg-[#9A59BA] rounded-[100%] -top-[10rem] -left-[10rem] -rotate-[45deg] blur-[390px] "></div>
 		<div className="absolute  h-[952px] w-[207px] bg-[#9A59BA] rounded-[100%] -top-[0rem] -right-[10rem] rotate-[45deg] blur-[390px] "></div>
 			
 			{/*Left Content*/}
 
-			<div className=" flex flex-col relative md:pt-10 " >
-				<div className="md:p-y14 p-4">
+			<div className=" flex flex-col relative md:pt-10 b" >
+				<div className="  p-4">
 				{/* <SectionHeader title="Branches" /> */}
 
 				<div className="relative ">
