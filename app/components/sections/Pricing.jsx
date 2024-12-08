@@ -82,9 +82,9 @@ function Pricing() {
         </p>
 
               <a href="https://discord.gg/deanslist" target="blank" rel="noopener noreferrer" className="w-full md:w-auto">
-              <button className="bg-[#70328F] overflow-hidden py-2  relative rounded-[10px] border border-[#9A59BA] font-medium hover:bg-purple-400 transition flex gap-2 items-center md:px-6 px-[120px] mt-5 md:mt-0">
-					<button className="md:left-[1px]  ] absolute border-b-[2px] border-b-[#ffffff] h-[40px] blur-[2px] px-16 rounded-[2px] -z-2 mb-[78px]"></button>
-            Get Started
+              <button className=" bg-[#70328F] w-full overflow-hidden py-2 relative rounded-[10px] border border-[#9A59BA] font-medium hover:bg-purple-400 transition flex gap-2 items-center md:px-6 px-[170px] mt-5 md:mt-0">
+					<button className="hidden lg:block md:left-[1px] absolute border-b-[2px] border-b-[#ffffff] h-[40px] blur-[2px] px-16 rounded-[2px] -z-2 mb-[78px]"></button>
+            Get Started 
           </button>
               </a>
 
@@ -118,8 +118,8 @@ function Pricing() {
               </p>
 
               <a href="https://discord.gg/deanslist" target="blank" rel="noopener noreferrer" className="w-full md:w-auto">
-              <button className="bg-[#100218] w-full overflow-hidden py-2 md:px-6 px-[120px] mt-5 md:mt-0 relative rounded-[10px] border border-[#9A59BA] text-center font-medium hover:bg-gray-800 transition flex gap-2 items-center ">
-					<button className="left-[1px] absolute border-b-[2px] border-b-[#ffffff] h-[40px] blur-[2px] text-center px-16 rounded-[2px] w-full  -z-2 mb-[78px]"></button>
+              <button className="bg-[#100218] w-full overflow-hidden py-2 md:px-6 px-[170px] mt-5 md:mt-0 relative rounded-[10px] border border-[#9A59BA] text-center font-medium hover:bg-gray-800 transition flex gap-2 items-center ">
+					<button className="hidden lg:block left-[1px] absolute border-b-[2px] border-b-[#ffffff] h-[40px] blur-[2px] text-center px-16 rounded-[2px] w-full  -z-2 mb-[78px]"></button>
             Get Started
           </button>
               </a>
@@ -158,9 +158,9 @@ function Pricing() {
               </p>
 
               <a href="https://discord.gg/deanslist" target="blank" rel="noopener noreferrer" className="w-full md:w-auto">
-              <button className="bg-[#70328F] md:px-6 px-[120px] mt-5 md:mt-0 overflow-hidden py-2  relative rounded-[10px] border border-[#9A59BA] font-medium hover:bg-purple-400 transition flex gap-2 items-center">
-					<button className="left-[1px] absolute border-b-[2px] border-b-[#ffffff] h-[40px] blur-[2px] px-16 rounded-[2px] -z-2 mb-[78px]"></button>
-            Get Started
+              <button className="bg-[#70328F] w-full md:px-6 px-[170px] mt-5 md:mt-0 overflow-hidden py-2  relative rounded-[10px] border border-[#9A59BA] font-medium hover:bg-purple-400 transition flex gap-2 items-center">
+					<button className="hidden lg:block left-[1px] absolute border-b-[2px] border-b-[#ffffff] h-[40px] blur-[2px] px-16 rounded-[2px] -z-2 mb-[78px]"></button>
+            Get Started 
           </button>
               </a>
 

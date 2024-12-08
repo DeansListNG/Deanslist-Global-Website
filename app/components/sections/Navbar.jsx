@@ -36,6 +36,7 @@ function NavBar() {
   // Function to toggle menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    console.log(isOpen)
   };
 
   return (
@@ -141,7 +142,7 @@ function NavBar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div
-        className="absolute top-full right-0 mt-2 w-48 bg-[#70328F] text-white rounded-lg shadow-lg z-10 sm:hidden"
+        className="absolute top-full right-0 mt-2 w-48 bg-[#70328F] text-white rounded-lg shadow-lg z-10 lg:hidden"
         id="mobile-menu"
         >
           <div className="space-y-2 px-4 py-3">
