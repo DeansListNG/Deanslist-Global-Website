@@ -19,8 +19,8 @@ function AboutUs() {
 	return (
 		<div className=" bg-[#090118]  mx-auto flex flex-col justify-center items-center text-white relative max-w-[1440px]" id="about-us">
 	{/* Background blur effect  */}
-	<div className="absolute  h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[40rem] -left-[8rem] -rotate-[45deg] blur-[390px] "></div>
-		<div className="absolute  h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[30rem] -right-[8rem] rotate-[45deg] blur-[390px] "></div>
+	<div className="absolute hidden md:block h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[40rem] -left-[8rem] -rotate-[45deg] blur-[390px] "></div>
+		<div className="absolute hidden md:block h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[30rem] -right-[8rem] rotate-[45deg] blur-[390px] "></div>
 			
 			{/*Heading*/}
 			<SectionHeader title="About Us" />
