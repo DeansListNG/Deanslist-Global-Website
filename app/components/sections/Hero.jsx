@@ -17,7 +17,7 @@ function Hero() {
 					New feature
 				</span>
 				<p
-					className="flex gap-2 items-center text-[15px]"
+					className="flex gap-2 items-center text-[12px] md:text-[15px]"
 				>
 					Check out the Realms dashboard <ArrowRight size={16} />
 				</p>
