@@ -3,7 +3,7 @@ import SectionHeader from "../ui/SectionHeader";
 
 function Branches() {
 	return (
-		<div className="lg:max-txl:pr-5 bg-[#090118] w-screen justify-center md:space-x-[120px] flex flex-col lg:flex-row pt-40 mb-12 relative ">
+		<div className="lg:max-txl:pr-5  w-screen justify-center md:space-x-[120px] flex flex-col lg:flex-row pt-40 mb-12 relative max-w-[1440px] mx-auto ">
 				{/* Background blur effect  */}
 		<div className="absolute hidden md:block h-[952px] w-[207px] bg-[#9A59BA] rounded-[100%] -top-[10rem] -left-[10rem] -rotate-[45deg] blur-[390px] "></div>
 		<div className="absolute hidden md:block h-[952px] w-[207px] bg-[#9A59BA] rounded-[100%] -top-[0rem] -right-[10rem] rotate-[45deg] blur-[390px] "></div>
@@ -15,8 +15,8 @@ function Branches() {
 				{/* <SectionHeader title="Branches" /> */}
 
 				<div className="relative ">
+				<div className="hidden md:block absolute -left-[1615px] top-[10px] h-2 w-[100rem] bg-[#49255C]"></div>
 					
-					<div className="absolute -left-[11rem] top-[10px] h-2 w-[10rem] bg-[#49255C]"></div>
 					Branches</div>
 					<h4 className="text-white text-[36px] tracking-[1px] font-semibold mb-4 mt-">Our Regional <span className="font-light font-editorial-new">States</span></h4>
 					<h5 className="text-[20px]  text-[#C0C3CE]">Countries in which you can find us IRL and visit our <br /> branches.</h5>

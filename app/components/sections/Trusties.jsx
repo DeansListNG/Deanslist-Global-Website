@@ -9,7 +9,7 @@ function Trusties() {
     <div className="w-screen h-40 flex justify-center items-center text-white pt-20">
       <div className="w-[1300px] flex flex-col items-center pt-12">
         <h6 className="text-white text-sm font-semibold mb-4">
-          We&apos;ve been trusted by <em>founders</em> from
+          We&apos;ve been trusted by <em className="font-light font-editorial-new">founders</em> from
         </h6>
         <div className="overflow-hidden relative w-full h-64 pt-4">
           <motion.div className="flex animate-scroll "

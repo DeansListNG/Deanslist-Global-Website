@@ -63,7 +63,7 @@ const Testimonials = () => {
 				</h2>
 				<p className="text-gray-300 mt-4">
 					We&apos;re proud to be working with these incredible and outstanding
-					projects, and thankful for their feedback, suggestions, and support.
+					projects, and thankful for their <br /> feedback, suggestions, and support.
 				</p>
 			</div>
 

@@ -31,18 +31,22 @@ function NavBar() {
 
 
   // State for toggling the mobile menu
+
+  
   const [isOpen, setIsOpen] = useState(false);
 
   // Function to toggle menu
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     console.log(isOpen)
+
+    document.getElementById('head').classList.toggle('bg-[#814D9A1A]')
   };
 
   return (
 
       <div id="nav" >
-    <header className=" flex justify-between md:max-xl:mx-16 xl:w-[75%] mx-auto md:mt-10 bg-[#814D9A1A] bg-opacity-10 px-9 py-5 items-center relative rounded-lg ">
+    <header id="head" className=" flex justify-between md:max-xl:mx-16 xl:w-[75%] mx-auto md:mt-10 bg-[#814D9A1A] bg-opacity-10 px-3 md:px-9 py-5 items-center relative rounded-lg ">
       {/* Logo */}
 
 
@@ -54,7 +58,7 @@ function NavBar() {
       </Link>
 
       {/* Hamburger Menu Button */}
-      <div className="absolute inset-y-0 right-0 flex items-center lg:hidden">
+      <div className=" pr-3 md:pr-0 absolute inset-y-0 right-0 flex items-center lg:hidden">
         <button
           type="button"
           className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -142,10 +146,10 @@ function NavBar() {
       {/* Mobile Menu */}
       {isOpen && (
         <div
-        className="absolute top-full right-0 mt-2 w-48 bg-[#70328F] text-white rounded-lg shadow-lg z-10 lg:hidden"
+        className="absolute top-full left-0 mt-2 w-full -translate-y-[6px] bg-[#090118] text-white pb-[40px] shadow-lg z-10 lg:hidden"
         id="mobile-menu"
         >
-          <div className="space-y-2 px-4 py-3">
+          <div className="space-y-2 px-3 py-3">
             <Link
               href="#"
               className="block rounded-md px-3 py-2 text-base font-medium hover:bg-gray-200"

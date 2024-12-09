@@ -31,7 +31,7 @@ const FAQs = [
 
 function FAQ() {
 	return (
-		<div className="bg-[#090118] h-auto grid grid-cols-1 md:grid-cols-2 my-8 mb-32 p-2  relative">
+		<div className="bg-[#090118] h-auto grid grid-cols-1 md:grid-cols-2 my-8 mb-32 p-2  relative mx-auto max-w-[1440px]">
 			{/* Background blur effect  */}
 		<div className="absolute  h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[40rem] -left-[8rem] -rotate-[45deg] blur-[390px] "></div>
 		<div className="absolute  h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[30rem] -right-[8rem] rotate-[45deg] blur-[390px] "></div>
@@ -39,7 +39,7 @@ function FAQ() {
 
 			<div className="md:pl-16 relative">
 				{/* <SectionHeader title="FAQ" /> */}
-				<div className="hidden md:block absolute -left-[110px] top-[10px] h-2 w-[10rem] bg-[#49255C]"></div>
+				<div className="hidden md:block absolute -left-[1550px] top-[10px] h-2 w-[100rem] bg-[#49255C]"></div>
 					<div>FAQ</div>
 				<p className="text-[36px] font-semibold ">All the <span className="font-light font-editorial-new">A&rsquo;s</span> to your <span className="font-light font-editorial-new">Q&rsquo;s</span></p>
 				<p className="font-extralight text-[20px] text-[#C0C3CE]">Everything you need to know about our community.</p>

@@ -53,8 +53,8 @@ const Services = () => {
 							Our goal is to make your product user-friendly with top-notch functionality <br /> that meets industry standards.
 						</p>
 					</div>
-					<div className="grid grid-cols-[30%,1fr] w-full h-[200px]">
-						<div>
+					<div className="grid grid-cols-[30%,1fr] w-full max-h-[200px] items-baseline">
+						<div className="">
 							<img src="/images/feedback1.svg" alt="feedback" />
 						</div>
 						<div>

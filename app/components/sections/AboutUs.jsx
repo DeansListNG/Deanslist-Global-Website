@@ -23,7 +23,12 @@ function AboutUs() {
 		<div className="absolute hidden md:block h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[30rem] -right-[8rem] rotate-[45deg] blur-[390px] "></div>
 			
 			{/*Heading*/}
-			<SectionHeader title="About Us" />
+			{/* <SectionHeader title="About Us" /> */}
+			<div className=" relative">
+			<div className="hidden md:block absolute -left-[1615px] top-[10px] h-2 w-[100rem] bg-[#49255C]"></div>
+				About us
+			</div>
+
 			<div className="flex flex-col items-center p-5 mt-8">
 				<h4 className="text-white text-[48px] font-bold mb-4">Redefining Excellence</h4>
 				<h5 className="text-[20px]">We&apos;re committed to pushing boundaries and creating impactful solutions that drive progress. </h5>
