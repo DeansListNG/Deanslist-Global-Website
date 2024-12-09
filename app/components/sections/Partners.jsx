@@ -11,12 +11,13 @@ function Partners() {
 		{ img: "solana.png", name: "Solana Foundation", link: "https://solana.com" },
 		{ img: "coloseum.png", name: "Colosseum", link: "https://www.colosseum.org/" },
 		{ img: "gib.png", name: "Gib.work", link: "https://gib.work" },
-		{ img: "anthensdao.png", name: "AthensDAOx", link: "https://x.com/athensdao" },
+		{ img: "anthensdao.png", name: "AthensDAOx", link: "https://x.com/AthensDAOx?t=wzi42mLRmCfBXkTNOevt0w&s=08" },
 		{ img: "waterloo.png", name: "University of Waterloo", link: "https://uwaterloo.ca/" },
 		{ img: "sec.png", name: "Sec3", link: "https://pro.sec3.dev/" },
 		{ img: "metaplex.png", name: "Metaplex", link: "https://www.metaplex.com/" },
 	];
-
+	
+	
 	return (
 		<div className=" h-96 flex justify-center items-center text-white">
 			<div className="w-[1000px] flex flex-col items-center">

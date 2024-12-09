@@ -37,7 +37,7 @@ const Events = () => {
 						<CarouselContent>
 							{[ "/images/events/event2.png", "/images/events/event1.png"].map((src, index) => (
 								<CarouselItem key={index}>
-									<div className="p-1 h- md:h-[308.41px] overflow-hidden rounded-md">
+									<div className="p-1 h-[308.41px] overflow-hidden rounded-md">
 										<Image src={src} alt='event1' fill />
 									</div>
 								</CarouselItem>

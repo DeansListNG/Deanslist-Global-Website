@@ -52,7 +52,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
   border-radius: 8px;
   border-image-slice: 1;
   border-image-source: linear-gradient(90deg, #70328F1F, #70328F1F, #70328F1F, #70328F1F);
