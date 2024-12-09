@@ -39,7 +39,7 @@ function Hero() {
 			<div className="flex self-start md:self-auto md:justify-center space-x-4">
 			<a href="https://discord.gg/deanslist" target="blank"  rel="noopener noreferrer"><button  className="relative overflow-hidden  h-[40px] w-[160px] rounded-full border border-[#9A59BA] font-medium hover:bg-purple-400 transition flex gap-2 items-center justify-center">
 					<CircleArrowUp className="hidden md:block "/>
-					<div className="left-[1px] absolute bg-[#683d7d] h-[40px] w-[160px] -translate-y-[px] rounded-[20px] -z-20"></div>
+					<div className="left-[0px] absolute bg-[#683d7d] h-[40px] w-[160px] -translate-y-[px] rounded-[20px] -z-20"></div>
 					<div className="left-[1px] absolute border-b-[2px] border-b-[#ffffff] h-[40px] blur-[2px] w-[160px] rounded-[20px] -z-10"></div>
 					<div className="w-fit ">Get Started</div>
 					
