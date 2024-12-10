@@ -22,10 +22,10 @@ export default function FooterMobile() {
 
     <div>
     <ul className='flex flex-col space-y-5'>
-            <li>Leaderboard</li>
-            <li>Documentation</li>
-            <li>NFT Store</li>
-            <li>Privacy</li>
+    <a href="https://leaderboard.deanslist.services/ " target="blank" className="hover:text-gray-300"><li>Leaderboard</li></a>
+    <a href="https://deans-list-docs.pages.dev/" className="hover:text-gray-300" target="blank"><li>Documentation</li></a>
+    <a href="https://www.tensor.trade/trade/deanslist" target="blank" className="hover:text-gray-300"><li>NFT Store</li></a>
+    <a href="/privacy" className="hover:text-gray-300" target="blank"><li>Privacy</li></a>
         </ul>
     </div>
 

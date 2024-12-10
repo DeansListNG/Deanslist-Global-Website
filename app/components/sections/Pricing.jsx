@@ -56,9 +56,9 @@ function Pricing() {
       <div className="flex flex-col md:p-8 items-center">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:px-10 px-4">
     {/* Feedback Bonanza */}
-          <div className="bg-[#1a0d2d] text-white py-4 shadow-lg flex flex-col h-full card-animated-border max-w-[470px]">
+          <div className="bg-[#1a0d2d] relative text-white py-4 shadow-lg flex flex-col h-full card-animated-border max-w-[470px]">
             <div className="px-4">
-
+            <div className="hiiden md:block absolute  h-[552px] w-[127px] bg-[#D47BFF] rounded-[100%] -top-[2rem] -right-[4rem]   blur-[150px]"></div>
             <h2 className="md:text-xl text-lg font-bold mb-4">Feedback Bonanza</h2>
       <p className="text-sm mb-4">
       Live expert feedback on X, YouTube, and Twitch to optimize your dApp.
@@ -93,7 +93,7 @@ function Pricing() {
     </div>
 
     {/* Feedback Bonanza PLUS */}
-          <div className="bg-[#7E3F9D] text-white py-6 shadow-lg flex flex-col h-full card-animated-border relative max-w-[470px]">
+          <div className="bg-[#7E3F9D]  text-white py-6 shadow-lg flex flex-col h-full card-animated-border relative max-w-[470px]">
           <div className="px-4">
             <div className="absolute top-6 right-1.5 bg-[#3C1454] text-xs font-bold px-2 py-1 rounded-full border border-[#7E3F9D]">
         Most Popular
@@ -130,8 +130,9 @@ function Pricing() {
     </div>
 
     {/* Deep Dive Assessment */}
-          <div className="bg-[#1a0d2d] text-white py-6 shadow-lg flex flex-col h-full card-animated-border max-w-[470px]">
+          <div className="bg-[#1a0d2d] relative text-white py-6 shadow-lg flex flex-col h-full card-animated-border max-w-[470px]">
           <div className="px-4 lg:max-txl:relative ">
+          <div className="hiiden md:block absolute  h-[552px] w-[127px] bg-[#D47BFF] rounded-[100%] -top-[2rem] -right-[4rem]   blur-[150px]"></div>
             <h2 className="text-lg md:text-xl font-bold mb-4">
         Deep Dive Assessment{" "}
               <span className="bg-[#3C1454] lg:max-txl:absolute lg:max-txl:right-[25px] text-xs font-bold px-2 py-1 rounded-full border border-[#7E3F9D]">
