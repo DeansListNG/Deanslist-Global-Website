@@ -180,48 +180,7 @@ function Trusties() {
                 className="w-12 h-12 flex-shrink-0 object-cover mr-4"
               />
 
-              {/* Duplicate for seamless looping */}
-              <img
-                src="realms.png"
-                alt="Image 1"
-                className="w-12 h-12 flex-shrink-0 object-cover mr-4"
-              />
-              <img
-                src="gib.png"
-                alt="Image 2"
-                className="w-12 h-12 flex-shrink-0 object-cover mr-4"
-              />
-              <img
-                src="realms.png"
-                alt="Image 1"
-                className="w-12 h-12 flex-shrink-0 object-cover mr-4"
-              />
-              <img
-                src="gib.png"
-                alt="Image 2"
-                className="w-12 h-12 flex-shrink-0 object-cover mr-4"
-              />
-              <img
-                src="realms.png"
-                alt="Image 1"
-                className="w-12 h-12 flex-shrink-0 object-cover mr-4"
-              />
-              <img
-                src="gib.png"
-                alt="Image 2"
-                className="w-12 h-12 flex-shrink-0 object-cover mr-4"
-              />
-              <img
-                src="realms.png"
-                alt="Image 1"
-                className="w-12 h-12 flex-shrink-0 object-cover mr-4"
-              />
-              <img
-                src="gib.png"
-                alt="Image 2"
-                className="w-12 h-12 flex-shrink-0 object-cover mr-4"
-              />
-
+            
             </div>
           </div>
         </div>
