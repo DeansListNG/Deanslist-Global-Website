@@ -1,7 +1,4 @@
-"use client";
-
 import React from "react";
-import { motion } from "framer-motion";
 import TestimonialCard from "../ui/TestimonialCard";
 import SectionHeader from "../ui/SectionHeader";
 

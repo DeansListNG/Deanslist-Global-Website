@@ -1,6 +1,3 @@
-'use client';
-
-import Scroller from "../ui/Scroller";
 
 function Partners() {
 	const partners = [
