@@ -55,7 +55,7 @@ const Testimonials = () => {
 	const bottomScrollingTestimonials = testimonials.slice(3);
 
 	return (
-		<div className="py-16 px-4 relative">
+		<div className="max-w-[1440px] mx-auto  py-16 px-4 relative">
 			<SectionHeader title="Testimonials" />
 			<div className="md:text-center mb-12">
 				<h2 className="text-white text-4xl font-bold">
