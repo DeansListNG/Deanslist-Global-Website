@@ -51,8 +51,8 @@ const testimonials = [
 ];
 
 const Testimonials = () => {
-	const topScrollingTestimonials = [...testimonials.slice(0, 3), ...testimonials.slice(0, 3)];
-	const bottomScrollingTestimonials = [...testimonials.slice(3), ...testimonials.slice(3)];
+	const topScrollingTestimonials = testimonials.slice(0, 3);
+	const bottomScrollingTestimonials = testimonials.slice(3);
 
 	return (
 		<div className="py-16 px-4 relative">
@@ -68,39 +68,23 @@ const Testimonials = () => {
 			</div>
 
 			{/* Scrolling Cards */}
-			<div className="overflow-hidden relative">
-				<motion.div
-					className="flex space-x-4 animate-scroll mb-4"
-					initial={{ x: "0%" }}
-					animate={{ x: "-50%" }}
-					transition={{
-						repeat: Infinity,
-						duration: 20,
-						ease: "linear",
-						repeatDelay: 0,
-						repeatType: "reverse",
-					}}
+			<div className="overflow-hidden relative scroller mb-4">
+				<div
+					className="flex space-x-4 scroller__inner w-max"
 				>
 					{topScrollingTestimonials.map((testimonial, index) => (
 						<TestimonialCard key={index} testimonial={testimonial} />
 					))}
-				</motion.div>
-				<motion.div
-					className="flex space-x-4 animate-scroll"
-					initial={{ x: "-50%" }}
-					animate={{ x: "0%" }}
-					transition={{
-						repeat: Infinity,
-						duration: 20,
-						ease: "linear",
-						repeatDelay: 0,
-						repeatType: "reverse",
-					}}
+				</div>
+			</div>
+			<div className="overflow-hidden relative scroller" data-direction="right">
+				<div
+					className="flex space-x-4 mb-4 scroller__inner w-max"
 				>
 					{bottomScrollingTestimonials.map((testimonial, index) => (
 						<TestimonialCard key={index} testimonial={testimonial} />
 					))}
-				</motion.div>
+				</div>
 			</div>
 		</div>
 	);

@@ -12,6 +12,7 @@ import FAQ from "./components/sections/FAQ";
 import Footer from "./components/sections/Footer";
 import Branches from "./components/sections/Branches";
 import FooterMobile from "./components/sections/footerMobile";
+import Scroller from "./components/ui/Scroller";
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <FAQ />
       <Footer />
       <FooterMobile/>
+      <Scroller />
     </>
   );
 }

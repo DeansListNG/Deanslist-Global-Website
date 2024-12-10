@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from "framer-motion";
-
+import Scroller from "../ui/Scroller";
 
 function Partners() {
 	const partners = [
@@ -20,30 +19,20 @@ function Partners() {
 	
 	return (
 		<div className=" h-96 flex justify-center items-center text-white">
-			<div className="w-[1000px] flex flex-col items-center">
+			<div className="w-screen md:w-[1000px] flex flex-col items-center">
 				<h6 className="text-white text-sm md:text-[16px] font-semibold mb-4">Partners</h6>
 				<h4 className="text-white xl:text-[36px]  font-bold mb-4">
 					Our <span className="font-light font-editorial-new">partners</span> are our strength
 				</h4>
-				<div className="overflow-hidden w-full">
+				<div className="overflow-hidden w-full scroller">
 
-					<div className="flex animate-scroll whitespace-nowrap">
+					<div className="flex overflow-hidden  w-max">
 
-						<motion.ul className="flex items-center gap-8"
-							initial={{ x: "0%" }}
-							animate={{ x: "-50%" }}
-							transition={{
-								repeat: Infinity,
-								duration: 20,
-								ease: "linear",
-								repeatDelay: 0,
-								repeatType: "reverse",
-							}}
-						>
+						<ul className="flex items-center gap-8 scroller__inner">
 							{partners.map((partner, index) => (
 								<li
 									key={index}
-									className="flex items-center justify-between gap-4 px-4 py-2 "
+									className="flex items-center justify-between gap-4 px-4 py-2"
 								>
 									<a href={partner.link} target="blank" rel="noopener noreferrer"
 										className="flex items-center gap-4">
@@ -55,7 +44,7 @@ function Partners() {
 										<span className="text-[24px] font-[600px]">{partner.name}</span></a>
 								</li>
 							))}
-						</motion.ul>
+						</ul>
 
 						<ul className="flex items-center gap-8 ml-6">
 							{partners.map((partner, index) => (
@@ -73,6 +62,7 @@ function Partners() {
 							))}
 						</ul>
 					</div>
+
 				</div>
 			</div>
 		</div>

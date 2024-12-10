@@ -5,7 +5,7 @@ const { default: Image } = require("next/image");
 const TestimonialCard = ({ testimonial }) => {
 	return (
 		<div
-			className="bg-gradient-to-tr from-[#2B153B] to-[#130821] text-white rounded-2xl shadow-md p-6 min-w-[300px] md:min-w-[500px] grid grid-rows-[1fr,fit] space-y-4"
+			className="bg-gradient-to-tr from-[#2B153B] to-[#130821] text-white rounded-2xl shadow-md p-6 min-w-[300px] max-w-[450px] md:max-w-[300px] md:min-w-[500px] grid grid-rows-[1fr,fit] space-y-4"
 		>
 			<p className="text-lg">“{testimonial.quote}”</p>
 			<div className="flex items-center space-x-4">
