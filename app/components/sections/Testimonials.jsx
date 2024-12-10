@@ -56,7 +56,11 @@ const Testimonials = () => {
 
 	return (
 		<div className="max-w-[1440px] mx-auto  py-16 px-4 relative">
-			<SectionHeader title="Testimonials" />
+			<div className=" relative text-center mb-5">
+			<div className="hidden md:block absolute -left-[950px] top-[10px] h-2 w-[100rem] bg-[#49255C]"></div>
+			Testimonials
+			</div>
+
 			<div className="md:text-center mb-12">
 				<h2 className="text-white text-4xl font-bold">
 					They say it <span className="font-light font-editorial-new">better</span> than we do!
