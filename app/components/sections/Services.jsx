@@ -93,13 +93,13 @@ const Services = () => {
 						</p>
 						<div className="flex relative justify-center items-center flex-grow h-[200px]">
 							{/* Hackathon Badges */}
-							<div className="bg-gradient-to-r from-gray-700 to-gray-500 text-purple-300 px-4 py-2 rounded-md absolute top-0 left-0">
+							<div className="bg-gradient-to-r from-gray-700 to-gray-500 md:text-[16px] translate-y-3 md:translate-y-0 text-[12px] md:px-4 px-[10px] py-[6px] md:py-2 rounded-md absolute top-0 left-0">
 								Renaissance Hackathon
 							</div>
-							<div className="bg-gradient-to-r from-[#D29808] to-[#8B680C] border border-[#D29808] text-purple-300 px-4 py-2 rounded-md absolute top-12 right-0">
+							<div className="bg-gradient-to-r from-[#D29808] to-[#8B680C] border border-[#D29808] translate-y-3 md:translate-y-0 md:text-[16px] text-[12px] md:px-4 px-[10px] py-[6px] rounded-md absolute top-12 right-0">
 								Radar Hackathon
 							</div>
-							<div className="bg-black px-2 py-1 rounded-md absolute bottom-0 border border-white text-sm">
+							<div className="bg-black md:text-[16px] text-[12px] md:px-4 px-[10px] py-[6px] -translate-y-2 md:translate-y-0 rounded-md absolute bottom-0 border border-white text-sm">
 								Hyperdrive Hackathon
 							</div>
 

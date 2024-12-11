@@ -10,7 +10,7 @@ function Branches() {
 			
 			{/*Left Content*/}
 
-			<div className=" flex flex-col relative md:pt-10 b" >
+			<div className=" flex flex-col relative md:pt-[32px] b" >
 				<div className="  p-4">
 				{/* <SectionHeader title="Branches" /> */}
 
