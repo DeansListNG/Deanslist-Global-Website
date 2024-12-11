@@ -42,7 +42,7 @@ function Pricing() {
 
 
 	return (
-    <div className="w-screen lex flex-col justify-center items-center text-white relative">
+    <div className="w-screen flex flex-col justify-center items-center text-white relative">
       	{/* Background blur effect  */}
 		<div className="absolute hidden md:block h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[10rem] -left-[8rem] -rotate-[45deg] blur-[390px] "></div>
 		<div className="absolute hidden md:block  h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[0rem] -right-[8rem] rotate-[45deg] blur-[390px] "></div>

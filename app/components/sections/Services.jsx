@@ -43,7 +43,7 @@ const Services = () => {
 			</div>
 
 			{/* Services Section */}
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4  2xl:w-[1250px] lg:max-txl:w-[1020px]  mx-auto">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-4  2xl:w-[1440px] lg:max-txl:w-[1020px]  mx-auto">
 
 				{/* Feedback Review */}
 				<div className="relative rounded-lg shadow-md flex flex-col space-y-4 overflow-hidden border-2 border-[#D47BFF]">
