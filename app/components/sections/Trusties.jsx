@@ -6,7 +6,7 @@ function Trusties() {
  
 
   return (
-    <div className="w-screen h-40 flex justify-center items-center text-white pt-20">
+    <div className="w-screen h-40 flex justify-center items-center text-white pt-20 md:mt-0 mt-[35px]">
       <div className="w-screen md:w-[1300px] flex flex-col items-center pt-12 overflow-hidden" data-speed="fast">
         <h6 className="text-white text-sm font-semibold mb-4">
           We&apos;ve been trusted by <em className="font-light font-editorial-new">founders</em> from
