@@ -31,7 +31,7 @@ const testimonials = [
 		quote:
 			"With improved accessibility, DeansListDAO makes it easier to find exactly what we need.",
 		logo: "/images/logo/gip.png",
-		company: "Metrik",
+		company: "Gib Work",
 		description: "Creative Agency",
 	},
 	{
@@ -44,7 +44,7 @@ const testimonials = [
 	{
 		quote:
 			"The improved user experience and accessible technical information have made a noticeable difference. The site redesign made exploring DeansListDAO's resources enjoyable and straightforward.",
-		logo: "/images/logo/meme.png", // Use actual paths from your public folder
+		logo: "/images/logo/meme.png", 
 		company: "Meme Royale",
 		description: "The modern way to grow your wealth.",
 	},
