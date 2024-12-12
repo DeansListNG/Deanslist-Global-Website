@@ -28,7 +28,7 @@ const testimonials = [
 		quote:
 			"With improved accessibility, DeansListDAO makes it easier to find exactly what we need.",
 		logo: "/images/logo/gip.png",
-		company: "Metrik",
+		company: "Gib Work",
 		description: "Creative Agency",
 	},
 	{
@@ -41,7 +41,7 @@ const testimonials = [
 	{
 		quote:
 			"The improved user experience and accessible technical information have made a noticeable difference. The site redesign made exploring DeansListDAO's resources enjoyable and straightforward.",
-		logo: "/images/logo/meme.png", // Use actual paths from your public folder
+		logo: "/images/logo/meme.png", 
 		company: "Meme Royale",
 		description: "The modern way to grow your wealth.",
 	},
@@ -52,8 +52,12 @@ const Testimonials = () => {
 	const bottomScrollingTestimonials = testimonials.slice(3);
 
 	return (
-		<div className="py-16 px-4 relative">
-			<SectionHeader title="Testimonials" />
+		<div className="max-w-[1440px] mx-auto  py-16 px-4 relative">
+			<div className=" relative text-center mb-5">
+			<div className="hidden md:block absolute -left-[950px] top-[10px] h-2 w-[100rem] bg-[#49255C]"></div>
+			Testimonials
+			</div>
+
 			<div className="md:text-center mb-12">
 				<h2 className="text-white text-4xl font-bold">
 					They say it <span className="font-light font-editorial-new">better</span> than we do!

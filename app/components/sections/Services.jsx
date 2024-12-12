@@ -22,14 +22,14 @@ const Services = () => {
 	};
 
 	return (
-		<div className="py-16 px-12 relative" id="services">
+		<div className="py-16 md:px-12 relative" id="services">
 				{/* Background blur effect  */}
 		<div className="absolute  md:h-[1052px] md:w-[277px] bg-[#9A59BA] rounded-[100%] -top-[10rem] -left-[8rem] -rotate-[45deg] blur-[390px] "></div>
 		<div className="absolute  md:h-[1052px] md:w-[277px] bg-[#9A59BA] rounded-[100%] -top-[0rem] -right-[8rem] rotate-[45deg] blur-[390px] "></div>
 			
 			<SectionHeader title="Services" />
 			{/* Header Section */}
-			<div className="md:text-center mb-12">
+			<div className="md:text-center px-5 mb-12">
 				<h2 className="text-4xl font-bold">
 					Community of Web3 <span className="font-editorial-new font-light">power users</span>.
 				</h2>
@@ -41,7 +41,7 @@ const Services = () => {
 			</div>
 
 			{/* Services Section */}
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-4  2xl:w-[1250px] lg:max-txl:w-[1020px]  mx-auto">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-4  2xl:w-[1440px] lg:max-txl:w-[1020px]  mx-auto">
 
 				{/* Feedback Review */}
 				<div className="relative rounded-lg shadow-md flex flex-col space-y-4 overflow-hidden border-2 border-[#D47BFF]">
@@ -91,13 +91,13 @@ const Services = () => {
 						</p>
 						<div className="flex relative justify-center items-center flex-grow h-[200px]">
 							{/* Hackathon Badges */}
-							<div className="bg-gradient-to-r from-gray-700 to-gray-500 text-purple-300 px-4 py-2 rounded-md absolute top-0 left-0">
+							<div className="bg-gradient-to-r from-gray-700 to-gray-500 md:text-[16px] translate-y-3 md:translate-y-0 text-[12px] md:px-4 px-[10px] py-[6px] md:py-2 rounded-md absolute top-0 left-0">
 								Renaissance Hackathon
 							</div>
-							<div className="bg-gradient-to-r from-[#D29808] to-[#8B680C] border border-[#D29808] text-purple-300 px-4 py-2 rounded-md absolute top-12 right-0">
+							<div className="bg-gradient-to-r from-[#D29808] to-[#8B680C] border border-[#D29808] translate-y-3 md:translate-y-0 md:text-[16px] text-[12px] md:px-4 px-[10px] py-[6px] rounded-md absolute top-12 right-0">
 								Radar Hackathon
 							</div>
-							<div className="bg-black px-2 py-1 rounded-md absolute bottom-0 border border-white text-sm">
+							<div className="bg-black md:text-[16px] text-[12px] md:px-4 px-[10px] py-[6px] -translate-y-2 md:translate-y-0 rounded-md absolute bottom-0 border border-white text-sm">
 								Hyperdrive Hackathon
 							</div>
 

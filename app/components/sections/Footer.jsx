@@ -3,7 +3,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="hidden md:block text-white p-6 sm:p-16 ">
+    <footer className="max-w-[1440px] mx-auto hidden md:block text-white p-6 sm:p-16 ">
       {/* Top Footer */}
       <div className="flex flex-col sm:flex-row justify-between items-center pb-10 space-y-6 sm:space-y-0">
         {/* Top left content */}

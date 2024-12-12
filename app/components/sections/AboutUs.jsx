@@ -1,23 +1,23 @@
 import SectionHeader from "../ui/SectionHeader";
 
 function AboutUs() {
-	const nfts = [
-		'/images/nft/Dean.svg',
-		'/images/nft/Beeman.png',
-		'/images/nft/Kai.png',
-		'/images/nft/Taki.png',
-		'/images/nft/Scientistjoe.png',
-		'/images/nft/Untiedbear.png',
-		'/images/nft/Moxie.png',
-		'/images/nft/unknown.png',
-		'/images/nft/Dean.svg',
-		'/images/nft/Beeman.png',
-		'/images/nft/Kai.png',
-		'/images/nft/Taki.png',
-		'/images/nft/Scientistjoe.png',
-	]
+	// const nfts = [
+	// 	'/images/nft/Dean.svg',
+	// 	'/images/nft/Beeman.png',
+	// 	'/images/nft/Kai.png',
+	// 	'/images/nft/Taki.png',
+	// 	'/images/nft/Scientistjoe.png',
+	// 	'/images/nft/Untiedbear.png',
+	// 	'/images/nft/Moxie.png',
+	// 	'/images/nft/unknown.png',
+	// 	'/images/nft/Dean.svg',
+	// 	'/images/nft/Beeman.png',
+	// 	'/images/nft/Kai.png',
+	// 	'/images/nft/Taki.png',
+	// 	'/images/nft/Scientistjoe.png',
+	// ]
 	return (
-		<div className=" bg-[#090118]  mx-auto flex flex-col justify-center items-center text-white relative max-w-[1440px]" id="about-us">
+		<div className=" md:bg-[url(/desktoppfp.webp)] bg-[url(/aboutMobilebg.webp)] md:bg-cover mx-auto flex flex-col justify-center items-center text-white relative max-w-[1440px]" id="about-us">
 	{/* Background blur effect  */}
 	<div className="absolute hidden md:block h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[40rem] -left-[8rem] -rotate-[45deg] blur-[390px] "></div>
 		<div className="absolute hidden md:block h-[1052px] w-[277px] bg-[#9A59BA] rounded-[100%] -top-[30rem] -right-[8rem] rotate-[45deg] blur-[390px] "></div>
@@ -71,7 +71,7 @@ function AboutUs() {
 			</div>
 
 			{/* Floating icons */}
-			{[
+			{/* {[
 				{ top: "10%", left: "5%" },
 				{ top: "20%", left: "40%" },
 				{ top: "15%", right: "10%" },
@@ -90,10 +90,10 @@ function AboutUs() {
 					key={index}
 					src={nfts[index]}
 					alt="Floating Icon"
-					className={`h-12 w-12 opacity-20 absolute animate-bounce`}
+					className={`h-12 w-12 opacity-20 absolute `}
 					style={{ ...position }}
 				/>
-			))}
+			))} */}
 
 		</div>
 	);

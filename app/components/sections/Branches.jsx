@@ -3,28 +3,33 @@ import SectionHeader from "../ui/SectionHeader";
 
 function Branches() {
 	return (
-		<div className="lg:max-txl:pr-5  w-screen justify-center md:space-x-[120px] flex flex-col lg:flex-row pt-40 mb-12 relative max-w-[1440px] mx-auto ">
+		<div className="lg:max-w-[1440px] pt-40 mx-auto ">
+			<div className="relative mx-auto w-fit">
+				<div className="hidden md:block absolute -left-[1610px] top-[10px] h-2 w-[100rem] bg-[#49255C]"></div>
+					<div className="">Branches</div>
+
+				</div>
+		
+		<div className="container  w-full flex flex-col lg:flex-row justify-between lg:space-x-8  mb-12 relative ">
 				{/* Background blur effect  */}
+
 		<div className="absolute hidden md:block h-[952px] w-[207px] bg-[#9A59BA] rounded-[100%] -top-[10rem] -left-[10rem] -rotate-[45deg] blur-[390px] "></div>
 		<div className="absolute hidden md:block h-[952px] w-[207px] bg-[#9A59BA] rounded-[100%] -top-[0rem] -right-[10rem] rotate-[45deg] blur-[390px] "></div>
 			
 			{/*Left Content*/}
 
-			<div className=" flex flex-col relative md:pt-10 b" >
+			<div className=" flex flex-col relative md:pt-[30px] b" >
 				<div className="  p-4">
 				{/* <SectionHeader title="Branches" /> */}
 
-				<div className="relative ">
-				<div className="hidden md:block absolute -left-[1615px] top-[10px] h-2 w-[100rem] bg-[#49255C]"></div>
-					
-					Branches</div>
+			
 					<h4 className="text-white text-[36px] tracking-[1px] font-semibold mb-4 mt-">Our Regional <span className="font-light font-editorial-new">States</span></h4>
 					<h5 className="text-[20px]  text-[#C0C3CE]">Countries in which you can find us IRL and visit our <br /> branches.</h5>
 				</div>
 			</div>
 
 			{/*Branch card*/}
-			<div div className="flex  flex-col gap-8 md:py-14 p-4  " >  
+			<div div className="flex  flex-col gap-8 md:py-14 md:p-14 p-4  " >  
 				{/*Card1*/}
 				<div className="flex flex-col min-w-[280px] md:w-[685px] md:h-36 border-2 border-[#51CC8B] rounded-lg pl-3 pt-1 pr-3 p-6 relative ">
 					<img src="dlngimage.png" alt="Image Description" className="absolute right-0 top-0 h-full w-1/2 object-cover" />
@@ -66,6 +71,7 @@ function Branches() {
 
 			</div>
 		</div>
+				</div>
 	);
 }
 
