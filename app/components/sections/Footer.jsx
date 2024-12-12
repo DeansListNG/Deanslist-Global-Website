@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
@@ -42,7 +43,7 @@ function Footer() {
         <div className="flex flex-col sm:flex-row text-center sm:space-x-4 space-y-3 sm:space-y-0">
           <a href="https://deans-list-docs.pages.dev/" className="hover:text-gray-300" target="blank">Documentation</a>
           <a href="https://www.tensor.trade/trade/deanslist" target="blank" className="hover:text-gray-300">NFT Store</a>
-          <a href="/privacy" className="hover:text-gray-300" target="blank">Privacy</a>
+          <Link href="privacy" className="hover:text-gray-300">Privacy</Link>
         </div>
         <p className="text-center">&copy; {new Date().getFullYear()} DeanslistDAO. All rights reserved.</p>
       </div>
