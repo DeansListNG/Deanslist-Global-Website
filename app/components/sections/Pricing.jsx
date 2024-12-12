@@ -56,7 +56,7 @@ function Pricing() {
       <div className="flex flex-col md:p-8 items-center">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:px-10 px-4">
     {/* Feedback Bonanza */}
-          <div className="bg-[#1a0d2d] relative text-white py-4 shadow-lg flex flex-col h-full card-animated-border max-w-[470px]">
+          <div className="bg-[#1a0d2d] relative text-white py-4 shadow-lg flex flex-col h-full card-animated-border max-w-[470px] gap-4">
             <div className="px-4">
             <div className="hiiden md:block absolute  h-[552px] w-[127px] bg-[#D47BFF] rounded-[100%] -top-[2rem] -right-[4rem]   blur-[150px]"></div>
             <h2 className="md:text-xl text-lg font-bold mb-4">Feedback Bonanza</h2>
@@ -76,7 +76,7 @@ function Pricing() {
               ))}
       </ul>
             </div>
-            <div className="px-4 border-t border-[#26183c] mt-4 pt-4 md:mt-32 lg:max-txl:mt-40 flex flex-col md:flex-row md:justify-between items-baseline">
+            <div className="px-4 border-t border-[#26183c] pt-4 mt-auto flex flex-col md:flex-row md:justify-between items-baseline">
               <p className="text-5xl 2xl:mt-[3px] item lg:max-txl:text-4xl font-semibold">
                 <span className=" font-semibold text-4xl lg:max-txl:text-3xl">$</span>999<span className="text-sm text-gray-300">per session</span>
         </p>
@@ -93,7 +93,7 @@ function Pricing() {
     </div>
 
     {/* Feedback Bonanza PLUS */}
-          <div className="bg-[#7E3F9D]  text-white py-6 shadow-lg flex flex-col h-full card-animated-border relative max-w-[470px]">
+          <div className="bg-[#7E3F9D]  text-white py-6 shadow-lg flex flex-col h-full card-animated-border relative max-w-[470px] gap-4">
           <div className="px-4">
             <div className="absolute top-6 right-1.5 bg-[#3C1454] text-xs font-bold px-2 py-1 rounded-full border border-[#7E3F9D]">
         Most Popular
@@ -113,7 +113,7 @@ function Pricing() {
       </ul>
       </div>
             
-            <div className="px-4 border-t border-[#FFFFFF1F] mt-4 pt-4 md:mt-[122px] lg:max-txl:mt-40 flex flex-col md:flex-row md:justify-between items-baseline">
+            <div className="px-4 border-t border-[#FFFFFF1F] pt-4 mt-auto flex flex-col md:flex-row md:justify-between items-baseline">
               <p className="text-5xl lg:max-txl:text-4xl font-semibold">
                 <span className="font-semibold text-4xl lg:max-txl:text-3xl">$</span>1,499<span className="text-sm text-gray-300">per session</span>
               </p>
@@ -130,7 +130,7 @@ function Pricing() {
     </div>
 
     {/* Deep Dive Assessment */}
-          <div className="bg-[#1a0d2d] relative text-white py-6 shadow-lg flex flex-col h-full card-animated-border max-w-[470px]">
+          <div className="bg-[#1a0d2d] relative text-white py-6 shadow-lg flex flex-col gap-4 h-full card-animated-border max-w-[470px]">
           <div className="px-4 lg:max-txl:relative ">
           <div className="hiiden md:block absolute  h-[552px] w-[127px] bg-[#D47BFF] rounded-[100%] -top-[2rem] -right-[4rem]   blur-[150px]"></div>
             <h2 className="text-lg md:text-xl font-bold mb-4">
@@ -153,9 +153,9 @@ function Pricing() {
                 </li>
               ))}
       </ul>
-      </div>
+            </div>
             
-            <div className=" px-4 border-t border-[#26183c] mt-4 pt-4 md:mt-20 2xl:mt-[64px] flex flex-col md:flex-row md:justify-between items-baseline">
+            <div className=" px-4 border-t border-[#26183c] pt-4 mt-auto flex flex-col md:flex-row md:justify-between items-baseline">
               <p className="text-5xl lg:max-txl:text-4xl font-semibold">
                 <span className="font-semibold text-4xl lg:max-txl:text-3xl">$</span>4,999<span className="text-sm text-gray-300">per session</span>
               </p>
