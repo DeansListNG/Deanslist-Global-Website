@@ -36,6 +36,7 @@ const NetworkGraph: React.FC = () => {
                                 className="border-none"
                             ></iframe>
                         )}
+                        
                         <input
                             type="text"
                             onKeyDown={handleKeyDown} // Listen for Enter key
