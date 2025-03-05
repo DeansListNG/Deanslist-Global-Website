@@ -1,5 +1,4 @@
 "use client"
-import React, { useState } from 'react';
 
 const NetworkGraph: React.FC = () => {
 
@@ -18,7 +17,7 @@ const NetworkGraph: React.FC = () => {
                         {(
                             <iframe
                                 id="vybeGraph"
-                                src="https://widget.vybenetwork.com/network-graph?address=Ds52CDgqdWbTWsua1hgT3AuSSy4FNx2Ezge1br3jQ14a&entity=wallet&connectionNode=program"
+                                src="https://widget.vybenetwork.com/network-graph?address=Ds52CDgqdWbTWsua1hgT3AuSSy4FNx2Ezge1br3jQ14a&entity=token&connectionNode=program"
                                 width="100%"
                                 height="600px"
                                 className="border-none"
