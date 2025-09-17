@@ -5,6 +5,29 @@ import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
 
+
+import Autoplay from 'embla-carousel-autoplay';
+
+type CarouselApi = UseEmblaCarouselType[1];
+type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
+type CarouselOptions = UseCarouselParameters[0];
+type CarouselPlugin = UseCarouselParameters[1];
+
+type CarouselProps = {
+  opts?: CarouselOptions;
+  plugins?: CarouselPlugin;
+  orientation?: 'horizontal' | 'vertical';
+};
+
+type CarouselContextProps = {
+  carouselRef: ReturnType<typeof useEmblaCarousel>[0];
+  carouselThumbsRef: ReturnType<typeof useEmblaCarousel>[0];
+  scrollPrev: () => void;
+  scrollNext: () => void;
+  onThumbClick: (index: number) => void;
+  selectedIndex: number;
+} & CarouselProps;
+
 // Context to share emblaApi
 type CarouselContextType = {
   embla: UseEmblaCarouselType[1] | null
@@ -24,12 +47,12 @@ export function Carousel({
   className,
   children,
 }: React.HTMLAttributes<HTMLDivElement>) {
-  //  const autoplay = React.useRef(
-  //   Autoplay({ delay: 4000, stopOnInteraction: true }) // 3s delay
-  // )
+   const autoplay = React.useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true }) // 3s delay
+  )
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, slidesToScroll: 'auto', align: 'center' },
-    //  [autoplay.current] 
+  [autoplay.current as any || Autoplay() as any]
   )
   return (
     <CarouselContext.Provider value={{ embla: emblaApi }}>
