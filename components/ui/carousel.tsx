@@ -8,25 +8,7 @@ import Image from "next/image"
 
 import Autoplay from 'embla-carousel-autoplay';
 
-type CarouselApi = UseEmblaCarouselType[1];
-type UseCarouselParameters = Parameters<typeof useEmblaCarousel>;
-type CarouselOptions = UseCarouselParameters[0];
-type CarouselPlugin = UseCarouselParameters[1];
 
-type CarouselProps = {
-  opts?: CarouselOptions;
-  plugins?: CarouselPlugin;
-  orientation?: 'horizontal' | 'vertical';
-};
-
-type CarouselContextProps = {
-  carouselRef: ReturnType<typeof useEmblaCarousel>[0];
-  carouselThumbsRef: ReturnType<typeof useEmblaCarousel>[0];
-  scrollPrev: () => void;
-  scrollNext: () => void;
-  onThumbClick: (index: number) => void;
-  selectedIndex: number;
-} & CarouselProps;
 
 // Context to share emblaApi
 type CarouselContextType = {
@@ -50,8 +32,10 @@ export function Carousel({
    const autoplay = React.useRef(
     Autoplay({ delay: 5000, stopOnInteraction: true }) // 3s delay
   )
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [emblaRef, emblaApi] = useEmblaCarousel(
     { loop: true, slidesToScroll: 'auto', align: 'center' },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [autoplay.current as any || Autoplay() as any]
   )
   return (
