@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel"
 import { cn } from "@/lib/utils"
 import Image from "next/image"
+import Link from "next/link"
 
 export default function Perks() {
   return (
@@ -20,7 +21,7 @@ export default function Perks() {
           <CarouselContent>
             {perkData.map((perk, index) => (
               <CarouselItem key={index}>
-
+<Link href={perk.href}>
                 <PerksCard>
 
                   <div className="relative  flex items-center justify-center">
@@ -40,6 +41,7 @@ export default function Perks() {
                     </div>
                   </div>
                 </PerksCard>
+            </Link>
 
               </CarouselItem>
             ))}
@@ -57,7 +59,7 @@ export default function Perks() {
 }
 
 
-export function PerksCard({ className, children }: { className?: string, children?: React.ReactNode }) {
+export function PerksCard({ className, children,  }: { className?: string, children?: React.ReactNode}) {
   return (
     <div className={cn("grid grid-rows-[60%_auto]", className, "  xl:h-[348.24px] md:h-[314.24px] h-[314.24px] w-full  xl:w-[421px] max-w-full rounded-xl bg-perkBg border border-perkBorder")}>
       {children}
