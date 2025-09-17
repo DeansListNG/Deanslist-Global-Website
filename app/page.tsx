@@ -1,4 +1,5 @@
 import dynamic from "next/dynamic";
+import Perks from "./components/sections/Perks";
 
 const NavBar = dynamic(() => import("./components/sections/NavBar"));
 const Hero = dynamic(() => import("./components/sections/Hero"));
@@ -68,6 +69,7 @@ export default function Home() {
           <Pricing />
           <Trusties />
           <Testimonials />
+          <Perks/>
           <AboutUs />
           <NetworkGraph/>
           <Branches/>

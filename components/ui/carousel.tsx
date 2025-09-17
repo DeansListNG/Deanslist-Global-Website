@@ -1,254 +1,120 @@
 "use client"
-
+// import Autoplay from "embla-carousel-autoplay"
 import * as React from "react"
-import useEmblaCarousel, {
-  type UseEmblaCarouselType,
-} from "embla-carousel-react"
-import { ArrowLeft, ArrowRight } from "lucide-react"
-
+import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react"
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import Image from "next/image"
 
-type CarouselApi = UseEmblaCarouselType[1]
-type UseCarouselParameters = Parameters<typeof useEmblaCarousel>
-type CarouselOptions = UseCarouselParameters[0]
-type CarouselPlugin = UseCarouselParameters[1]
-
-type CarouselProps = {
-  opts?: CarouselOptions
-  plugins?: CarouselPlugin
-  orientation?: "horizontal" | "vertical"
-  setApi?: (api: CarouselApi) => void
+// Context to share emblaApi
+type CarouselContextType = {
+  embla: UseEmblaCarouselType[1] | null
 }
-
-type CarouselContextProps = {
-  carouselRef: ReturnType<typeof useEmblaCarousel>[0]
-  api: ReturnType<typeof useEmblaCarousel>[1]
-  scrollPrev: () => void
-  scrollNext: () => void
-  canScrollPrev: boolean
-  canScrollNext: boolean
-} & CarouselProps
-
-const CarouselContext = React.createContext<CarouselContextProps | null>(null)
+const CarouselContext = React.createContext<CarouselContextType | null>(null)
 
 function useCarousel() {
   const context = React.useContext(CarouselContext)
-
   if (!context) {
-    throw new Error("useCarousel must be used within a <Carousel />")
+    throw new Error("useCarousel must be used within <Carousel>")
   }
-
   return context
 }
 
-const Carousel = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & CarouselProps
->(
-  (
-    {
-      orientation = "horizontal",
-      opts,
-      setApi,
-      plugins,
-      className,
-      children,
-      ...props
-    },
-    ref
-  ) => {
-    const [carouselRef, api] = useEmblaCarousel(
-      {
-        ...opts,
-        axis: orientation === "horizontal" ? "x" : "y",
-      },
-      plugins
-    )
-    const [canScrollPrev, setCanScrollPrev] = React.useState(false)
-    const [canScrollNext, setCanScrollNext] = React.useState(false)
-
-    const onSelect = React.useCallback((api: CarouselApi) => {
-      if (!api) {
-        return
-      }
-
-      setCanScrollPrev(api.canScrollPrev())
-      setCanScrollNext(api.canScrollNext())
-    }, [])
-
-    const scrollPrev = React.useCallback(() => {
-      api?.scrollPrev()
-    }, [api])
-
-    const scrollNext = React.useCallback(() => {
-      api?.scrollNext()
-    }, [api])
-
-    const handleKeyDown = React.useCallback(
-      (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (event.key === "ArrowLeft") {
-          event.preventDefault()
-          scrollPrev()
-        } else if (event.key === "ArrowRight") {
-          event.preventDefault()
-          scrollNext()
-        }
-      },
-      [scrollPrev, scrollNext]
-    )
-
-    React.useEffect(() => {
-      if (!api || !setApi) {
-        return
-      }
-
-      setApi(api)
-    }, [api, setApi])
-
-    React.useEffect(() => {
-      if (!api) {
-        return
-      }
-
-      onSelect(api)
-      api.on("reInit", onSelect)
-      api.on("select", onSelect)
-
-      return () => {
-        api?.off("select", onSelect)
-      }
-    }, [api, onSelect])
-
-    return (
-      <CarouselContext.Provider
-        value={{
-          carouselRef,
-          api: api,
-          opts,
-          orientation:
-            orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
-          scrollPrev,
-          scrollNext,
-          canScrollPrev,
-          canScrollNext,
-        }}
-      >
-        <div
-          ref={ref}
-          onKeyDownCapture={handleKeyDown}
-          className={cn("relative", className)}
-          role="region"
-          aria-roledescription="carousel"
-          {...props}
-        >
-          {children}
-        </div>
-      </CarouselContext.Provider>
-    )
-  }
-)
-Carousel.displayName = "Carousel"
-
-const CarouselContent = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel()
-
+// Root
+export function Carousel({
+  className,
+  children,
+}: React.HTMLAttributes<HTMLDivElement>) {
+  //  const autoplay = React.useRef(
+  //   Autoplay({ delay: 4000, stopOnInteraction: true }) // 3s delay
+  // )
+  const [emblaRef, emblaApi] = useEmblaCarousel(
+    { loop: true, slidesToScroll: 'auto', align: 'center' },
+    //  [autoplay.current] 
+  )
   return (
-    <div ref={carouselRef} className="overflow-hidden">
-      <div
-        ref={ref}
-        className={cn(
-          "flex",
-          orientation === "horizontal" ? "-ml-4" : "-mt-4 flex-col",
-          className
-        )}
-        {...props}
-      />
+    <CarouselContext.Provider value={{ embla: emblaApi }}>
+      <div className={cn("relative overflow-hidden", className)} ref={emblaRef}>
+        {children}
+      </div>
+    </CarouselContext.Provider>
+  )
+}
+
+// Content wrapper
+export function CarouselContent({
+  className,
+  children,
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return <div className={cn("flex", className)}>{children}</div>
+}
+
+// Item (fit 3 slides per view)
+export function CarouselItem({
+  className,
+  children,
+}: React.HTMLAttributes<HTMLDivElement>) {
+  return (
+    <div className={cn("min-w-[270px] shrink-0 grow-0 basis-2/3", " md:basis-1/2 xl:basis-1/3", className)}>
+      {children}
     </div>
   )
-})
-CarouselContent.displayName = "CarouselContent"
+}
 
-const CarouselItem = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
-  const { orientation } = useCarousel()
-
+// Previous button
+export function CarouselPrevious({ className }: { className?: string }) {
+  const { embla } = useCarousel()
   return (
-    <div
-      ref={ref}
-      role="group"
-      aria-roledescription="slide"
-      className={cn(
-        "min-w-0 shrink-0 grow-0 basis-full",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
-        className
-      )}
-      {...props}
-    />
-  )
-})
-CarouselItem.displayName = "CarouselItem"
-
-const CarouselPrevious = React.forwardRef<
-  HTMLButtonElement,
-  React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollPrev, canScrollPrev } = useCarousel()
-
-  return (
-    <Button
-      ref={ref}
-      variant={variant}
-      size={size}
-      className={cn("absolute h-8 w-8 rounded-full", orientation === "horizontal"
-        ? "left-4 top-1/2 -translate-y-1/2"
-        : "-top-12 left-1/2 -translate-x-[100%] rotate-90", className)}
-      disabled={!canScrollPrev}
-      onClick={scrollPrev}
-      {...props}
+    <button
+      onClick={() => embla?.scrollPrev()}
+      className={cn("absolute top-1/2 left-4 -translate-y-1/2  text-white  z-50", className)}
     >
-      <ArrowLeft className="h-4 w-4" />
-      <span className="sr-only">Previous slide</span>
-    </Button>
+      
+     <Image src="/previousbtn.svg" alt="arrow-left" width={24} height={24}/>
+    </button>
   )
-})
-CarouselPrevious.displayName = "CarouselPrevious"
+}
 
-const CarouselNext = React.forwardRef<
-  HTMLButtonElement,
-  React.ComponentProps<typeof Button>
->(({ className, variant = "outline", size = "icon", ...props }, ref) => {
-  const { orientation, scrollNext, canScrollNext } = useCarousel()
+// Next button
+export function CarouselNext({ className }: { className?: string }) {
+  const { embla } = useCarousel()
+  return (
+    <button
+      onClick={() => embla?.scrollNext()}
+      className={cn("absolute top-1/2 right-4 -translate-y-1/2", className)}
+    >
+          <Image src="/nextbtn.svg" alt="arrow-left" width={24} height={24}/>
+
+    </button>
+  )
+}
+
+// Dot buttons
+export function DotButtons({ className }: { className?: string }) {
+  const { embla } = useCarousel()
+  const [selectedIndex, setSelectedIndex] = React.useState(0)
+  const [scrollSnaps, setScrollSnaps] = React.useState<number[]>([])
+
+  React.useEffect(() => {
+    if (!embla) return
+    setScrollSnaps(embla.scrollSnapList())
+    setSelectedIndex(embla.selectedScrollSnap())
+    embla.on("select", () => setSelectedIndex(embla.selectedScrollSnap()))
+  }, [embla])
+
+  if (!embla) return null
 
   return (
-    <Button
-      ref={ref}
-      variant={variant}
-      size={size}
-      className={cn("absolute h-8 w-8 rounded-full", orientation === "horizontal"
-        ? "right-4 top-1/2 -translate-y-1/2"
-        : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90", className)}
-      disabled={!canScrollNext}
-      onClick={scrollNext}
-      {...props}
-    >
-      <ArrowRight className="h-4 w-4" />
-      <span className="sr-only">Next slide</span>
-    </Button>
+    <div className={cn("flex gap-2 justify-center", className)}>
+      {scrollSnaps.map((_, idx) => (
+        <button
+          key={idx}
+          onClick={() => embla.scrollTo(idx)}
+          className={cn(
+            "h-2 w-2 rounded-full transition-colors",
+            idx === selectedIndex ? "bg-primary" : "bg-muted"
+          )}
+        />
+      ))}
+    </div>
   )
-})
-CarouselNext.displayName = "CarouselNext"
-
-export {
-  type CarouselApi,
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselPrevious,
-  CarouselNext,
 }
