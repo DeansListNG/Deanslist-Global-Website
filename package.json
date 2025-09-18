@@ -77,5 +77,8 @@
       "utf-8-validate",
       "workerd"
     ]
-  }
+  },
+  "engines": {
+  "node": ">=18.18.0"
+}
 }
