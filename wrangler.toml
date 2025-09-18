@@ -1,9 +1,9 @@
 name = "my-worker"
 
-main = "src/index.js"  # or whatever your entry file is
+
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".next"
-NODE_VERSION = 20
+
 # Optional: uncomment if you want to deploy
 # account_id = "your-cloudflare-account-id"
 # workers_dev = true
